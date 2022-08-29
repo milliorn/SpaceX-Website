@@ -183,7 +183,7 @@ section {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  animation: fadeBounce 3s infinite;
+  animation: fadeBounce 5s infinite;
 }
 
 /* Footer */
@@ -266,6 +266,7 @@ footer ul li a:hover {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
 
+/* Overlay */
 .overlay-show {
   position: fixed;
   top: 0;
@@ -276,9 +277,105 @@ footer ul li a:hover {
   z-index: 3;
 }
 
+/* Stop body scroll */
 .stop-scrolling {
   overflow: hidden;
 }
+
+/* Hide mobile main menu items */
+.mobile-only {
+  display: none;
+}
+
+/* Mobile menu */
+.mobile-main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  background: #000;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Bring menu from right */
+.show-menu {
+  transform: translateX(0);
+}
+
+.mobile-main-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.mobile-main-menu ul li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px #555 dotted;
+  width: 100%;
+  text-align: right;
+  padding-bottom: 8px;
+}
+
+.mobile-main-menu ul li a {
+  color: #fff;
+  transition: color 0.6s;
+}
+
+.mobile-main-menu ul li a:hover {
+  color: #aaa;
+}
+
+/* Inner Pages */
+.bg-falcon-9 {
+  background-image: url("../img/falcon-9.webp");
+}
+
+.bg-falcon-heavy {
+  background-image: url("../img/falcon-heavy.webp");
+}
+
+.bg-dragon {
+  background-image: url("../img/dragon.webp");
+}
+
+.section-animate {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section-inner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  width: 80%;
+}
+
+.section-inner-center h3 {
+  font-size: 100px;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner-center p {
+  font-size: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+/* Animations */
 
 @keyframes fadeInUp {
   0% {
@@ -289,6 +386,16 @@ footer ul li a:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -354,14 +461,5 @@ footer ul li a:hover {
 
   .section-inner-center h3 {
     font-size: 50px;
-  }
-
-  /* Stats */
-  .stats {
-    flex-direction: column;
-  }
-
-  .stats div {
-    margin-bottom: 20px;
   }
 }
