@@ -51,7 +51,7 @@ ul {
   top: 0;
   transform: translateX(100%);
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  width: 350px;
+  width: 320px;
   z-index: 4;
 }
 
@@ -65,13 +65,14 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px;
+  padding: 48px;
   width: 100%;
 }
 
 .mobile-main-menu ul li {
   border-bottom: 1px #555 dotted;
   font-size: 18px;
+  line-height: 28px;
   margin-bottom: 20px;
   padding-bottom: 8px;
   text-align: right;
@@ -92,10 +93,10 @@ ul {
 .main-header {
   align-items: center;
   display: flex;
-  height: 100px;
+  height: 96px;
   justify-content: space-between;
   left: 0;
-  padding: 0 30px;
+  padding: 0 32px;
   position: fixed;
   text-transform: uppercase;
   top: 0;
@@ -106,7 +107,7 @@ ul {
 /* Logo */
 .logo {
   height: auto;
-  width: 210px;
+  width: 208px;
 }
 
 .logo img {
@@ -117,7 +118,7 @@ ul {
 
 /* Desktop */
 .desktop-menu {
-  margin-right: 50px;
+  margin-right: 56px;
 }
 
 .desktop-menu ul {
@@ -206,9 +207,9 @@ ul {
   display: inline-block;
   font-weight: bold;
   margin-top: 10px;
-  min-width: 130px;
+  min-width: 128px;
   overflow: hidden;
-  padding: 15px 50px;
+  padding: 16px 56px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -238,10 +239,11 @@ ul {
 
 .scroll-arrow {
   animation: fadeBounce 5s infinite;
-  bottom: 50px;
+  bottom: 48px;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
+  background-color: transparent;
 }
 
 /* Sections */
@@ -255,7 +257,7 @@ section {
 }
 
 .section-inner {
-  bottom: 200px;
+  bottom: 192px;
   left: 150px;
   max-width: 560px;
   position: absolute;

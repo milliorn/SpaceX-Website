@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js" defer></script>
     <title>SpaceX</title>
   </head>
   <body>
@@ -86,7 +87,7 @@
       <span class="hamburger-bottom"></span>
     </button>
 
-    <section class="section-a">
+    <section class="section-a"  id="section-a">
       <div class="section-inner">
         <h4>Upcoming Launch</h4>
         <h2>CRS-25 Mission</h2>
@@ -96,7 +97,7 @@
         </a>
       </div>
 
-      <div class="scroll-arrow">
+      <button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-a">
         <svg width="30px" height="20px">
           <path
             stroke="#ffffff"
@@ -108,7 +109,7 @@
       </div>
     </section>
 
-    <section class="section-b">
+    <section class="section-b" id="section-b">
       <div class="section-inner">
         <h4>Recent Launch</h4>
         <h2>Starlink Mission</h2>
@@ -118,7 +119,7 @@
         </a>
       </div>
 
-      <div class="scroll-arrow">
+      <button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-b">
         <svg width="30px" height="20px">
           <path
             stroke="#ffffff"
@@ -130,7 +131,7 @@
       </div>
     </section>
 
-    <section class="section-c">
+    <section class="section-c"  id="section-c">
       <div class="section-inner">
         <h4>Recent Mission</h4>
         <h2>SES-22 Mission</h2>
@@ -140,7 +141,7 @@
         </a>
       </div>
 
-      <div class="scroll-arrow">
+      <button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-c">
         <svg width="30px" height="20px">
           <path
             stroke="#ffffff"
@@ -152,7 +153,7 @@
       </div>
     </section>
 
-    <section class="section-d">
+    <section class="section-d"  id="section-d">
       <div class="section-inner">
         <h4>Recent Launch</h4>
         <h2>Globalstar FM15 Mission</h2>
@@ -162,7 +163,7 @@
         </a>
       </div>
 
-      <div class="scroll-arrow">
+      <button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-d">
         <svg width="30px" height="20px">
           <path
             stroke="#ffffff"
@@ -174,7 +175,7 @@
       </div>
     </section>
 
-    <section class="section-e">
+    <section class="section-e"  id="section-e">
       <div class="section-inner">
         <h2>Starship Update</h2>
         <a href="https://www.spacex.com/vehicles/starship/" class="btn">
@@ -183,7 +184,7 @@
         </a>
       </div>
 
-      <div class="scroll-arrow">
+      <button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-e">
         <svg width="30px" height="20px">
           <path
             stroke="#ffffff"
@@ -195,7 +196,7 @@
       </div>
     </section>
 
-    <section class="section-f">
+    <section class="section-f"  id="section-f">
       <div class="section-inner">
         <h2>Starship to land nasa astronauts on the moon</h2>
         <a href="https://www.youtube.com/watch?v=U5_etd3l41g" class="btn">
@@ -203,9 +204,20 @@
           <span>Rewatch</span>
         </a>
       </div>
+
+      <button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-f">
+        <svg width="30px" height="20px">
+          <path
+            stroke="#ffffff"
+            fill="none"
+            stroke-width="2px"
+            d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+          ></path>
+        </svg>
+      </div>
     </section>
 
-    <footer>
+    <footer id="footer">
       <ul>
         <li>
           SpaceX &copy;
@@ -230,5 +242,4 @@
       </ul>
     </footer>
   </body>
-  <script src="js/script.js"></script>
 </html>
