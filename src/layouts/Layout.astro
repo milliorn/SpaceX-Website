@@ -92,6 +92,20 @@ const year: Number = new Date().getFullYear();
 		</header>
 
 		<button id="menu-btn" class="hamburger" type="button">
+			<script is:inline>
+				const btn = document.getElementById("menu-btn");
+				const overlay = document.getElementById("overlay");
+				const menu = document.getElementById("mobile-menu");
+
+				btn.addEventListener("click", navToggle);
+
+				function navToggle() {
+					btn.classList.toggle("open");
+					overlay.classList.toggle("overlay-show");
+					document.body.classList.toggle("stop-scrolling");
+					menu.classList.toggle("show-menu");
+				}
+			</script>
 			<span class="hamburger-top"></span>
 			<span class="hamburger-middle"></span>
 			<span class="hamburger-bottom"></span>
