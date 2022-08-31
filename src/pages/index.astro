@@ -129,5 +129,134 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+	.scroll-arrow {
+		animation: fadeBounce 5s infinite;
+		bottom: 48px;
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
+		background-color: transparent;
+	}
 
+	/* Sections */
+	section {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		position: relative;
+		text-transform: uppercase;
+	}
+
+	.section-inner {
+		bottom: 192px;
+		left: 150px;
+		max-width: 560px;
+		position: absolute;
+	}
+
+	.section-inner h4 {
+		animation: fadeInUp 0.5s ease-in-out;
+		font-size: 22px;
+		font-weight: 300;
+		margin-bottom: 5px;
+	}
+
+	.section-inner h2 {
+		animation-fill-mode: both;
+		animation: fadeInUp 0.5s ease-in-out 0.2s;
+		font-size: 50px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	.section-inner a {
+		animation-fill-mode: both;
+		animation: fadeInUp 0.5s ease-in-out 0.4s;
+	}
+
+	/* Background images */
+	.section-a {
+		background-image: url("../img/section-a.webp");
+	}
+	.section-b {
+		background-image: url("../img/section-b.webp");
+	}
+	.section-c {
+		background-image: url("../img/section-c.webp");
+	}
+	.section-d {
+		background-image: url("../img/section-d.webp");
+	}
+	.section-e {
+		background-image: url("../img/section-e.webp");
+	}
+	.section-f {
+		background-image: url("../img/section-f.webp");
+	}
+
+	.section-animate {
+		animation: fadeIn 2s ease-in-out;
+	}
+
+	.section-inner-center {
+		left: 50%;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+	}
+
+	.section-inner-center h3 {
+		animation: fadeInUp 0.5s ease-in-out;
+		font-size: 100px;
+		margin-bottom: 15px;
+	}
+
+	.section-inner-center p {
+		animation-fill-mode: both;
+		animation: fadeInUp 0.5s ease-in-out 0.2s;
+		font-size: 20px;
+	}
+
+	/* Animations */
+	@keyframes fadeInUp {
+		0% {
+			opacity: 0;
+			transform: translateY(140px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeBounce {
+		0%,
+		20%,
+		50%,
+		80%,
+		100% {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+
+		40% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 </style>
