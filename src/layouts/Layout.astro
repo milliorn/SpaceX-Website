@@ -1,341 +1,287 @@
 ---
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-const year: Number = new Date().getFullYear();
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div id="overlay"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div id="overlay"></div>
 
-		<div id="mobile-menu" class="mobile-main-menu">
-			<ul>
-				<li><a href="https://www.spacex.com/mission/">Mission</a></li>
-				<li><a href="https://www.spacex.com/launches/">Launches</a></li>
-				<li><a href="https://www.spacex.com/careers/">Careers</a></li>
-				<li><a href="https://www.spacex.com/updates/">Updates</a></li>
-				<li><a href="https://shop.spacex.com/">Shop</a></li>
+    <div id="mobile-menu" class="mobile-main-menu">
+      <ul>
+        <li><a href="https://www.spacex.com/mission/">Mission</a></li>
+        <li><a href="https://www.spacex.com/launches/">Launches</a></li>
+        <li><a href="https://www.spacex.com/careers/">Careers</a></li>
+        <li><a href="https://www.spacex.com/updates/">Updates</a></li>
+        <li><a href="https://shop.spacex.com/">Shop</a></li>
 
-				<li class="mobile-only">
-					<a href="https://www.spacex.com/vehicles/falcon-9/">Falcon 9</a>
-				</li>
-				<li class="mobile-only">
-					<a href="https://www.spacex.com/vehicles/falcon-heavy/"
-						>Falcon Heavy</a
-					>
-				</li>
-				<li class="mobile-only">
-					<a href="https://www.spacex.com/vehicles/dragon/">Dragon</a>
-				</li>
-				<li class="mobile-only">
-					<a href="https://www.spacex.com/vehicles/starship/">Starship</a>
-				</li>
-				<li class="mobile-only">
-					<a href="https://www.spacex.com/human-spaceflight/"
-						>Human Spaceflight</a
-					>
-				</li>
-				<li class="mobile-only">
-					<a href="https://www.spacex.com/rideshare/">Rideshare</a>
-				</li>
-				<li class="mobile-only">
-					<a href="https://www.starlink.com/">Starlink</a>
-				</li>
-			</ul>
-		</div>
+        <li class="mobile-only">
+          <a href="https://www.spacex.com/vehicles/falcon-9/">Falcon 9</a>
+        </li>
+        <li class="mobile-only">
+          <a href="https://www.spacex.com/vehicles/falcon-heavy/"
+            >Falcon Heavy</a
+          >
+        </li>
+        <li class="mobile-only">
+          <a href="https://www.spacex.com/vehicles/dragon/">Dragon</a>
+        </li>
+        <li class="mobile-only">
+          <a href="https://www.spacex.com/vehicles/starship/">Starship</a>
+        </li>
+        <li class="mobile-only">
+          <a href="https://www.spacex.com/human-spaceflight/"
+            >Human Spaceflight</a
+          >
+        </li>
+        <li class="mobile-only">
+          <a href="https://www.spacex.com/rideshare/">Rideshare</a>
+        </li>
+        <li class="mobile-only">
+          <a href="https://www.starlink.com/">Starlink</a>
+        </li>
+      </ul>
+    </div>
 
-		<header class="main-header">
-			<div class="logo">
-				<a href="index.html">
-					<img src="src/img/logo.png" alt="SpaceX" />
-				</a>
-			</div>
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="src/img/logo.png" alt="SpaceX" />
+        </a>
+      </div>
 
-			<nav class="desktop-menu">
-				<ul>
-					<li>
-						<a href="https://www.spacex.com/vehicles/falcon-9/">Falcon 9</a>
-					</li>
-					<li>
-						<a href="https://www.spacex.com/vehicles/falcon-heavy/"
-							>Falcon Heavy</a
-						>
-					</li>
-					<li><a href="https://www.spacex.com/vehicles/dragon/">Dragon</a></li>
-					<li>
-						<a href="https://www.spacex.com/vehicles/starship/">Starship</a>
-					</li>
-					<li>
-						<a href="https://www.spacex.com/human-spaceflight/"
-							>Human Spaceflight</a
-						>
-					</li>
-					<li><a href="https://www.spacex.com/rideshare/">Rideshare</a></li>
+      <nav class="desktop-menu">
+        <ul>
+          <li>
+            <a href="https://www.spacex.com/vehicles/falcon-9/">Falcon 9</a>
+          </li>
+          <li>
+            <a href="https://www.spacex.com/vehicles/falcon-heavy/"
+              >Falcon Heavy</a
+            >
+          </li>
+          <li><a href="https://www.spacex.com/vehicles/dragon/">Dragon</a></li>
+          <li>
+            <a href="https://www.spacex.com/vehicles/starship/">Starship</a>
+          </li>
+          <li>
+            <a href="https://www.spacex.com/human-spaceflight/"
+              >Human Spaceflight</a
+            >
+          </li>
+          <li><a href="https://www.spacex.com/rideshare/">Rideshare</a></li>
 
-					<li><a href="https://www.starlink.com/">Starlink</a></li>
-					<li><a href="https://shop.spacex.com/">Store</a></li>
-				</ul>
-			</nav>
-		</header>
+          <li><a href="https://www.starlink.com/">Starlink</a></li>
+          <li><a href="https://shop.spacex.com/">Store</a></li>
+        </ul>
+      </nav>
+    </header>
 
-		<button id="menu-btn" class="hamburger" type="button">
-			<script is:inline>
-				const btn = document.getElementById("menu-btn");
-				const overlay = document.getElementById("overlay");
-				const menu = document.getElementById("mobile-menu");
+    <button id="menu-btn" class="hamburger" type="button">
+      <script is:inline>
+        const btn = document.getElementById("menu-btn");
+        const overlay = document.getElementById("overlay");
+        const menu = document.getElementById("mobile-menu");
 
-				btn.addEventListener("click", navToggle);
+        btn.addEventListener("click", navToggle);
 
-				function navToggle() {
-					btn.classList.toggle("open");
-					overlay.classList.toggle("overlay-show");
-					document.body.classList.toggle("stop-scrolling");
-					menu.classList.toggle("show-menu");
-				}
-			</script>
-			<span class="hamburger-top"></span>
-			<span class="hamburger-middle"></span>
-			<span class="hamburger-bottom"></span>
-		</button>
+        function navToggle() {
+          btn.classList.toggle("open");
+          overlay.classList.toggle("overlay-show");
+          document.body.classList.toggle("stop-scrolling");
+          menu.classList.toggle("show-menu");
+        }
+      </script>
+      <span class="hamburger-top"></span>
+      <span class="hamburger-middle"></span>
+      <span class="hamburger-bottom"></span>
+    </button>
 
-		<slot />
+    <slot />
+    <Footer />
 
-		<footer id="footer">
-			<ul>
-				<li>
-					SpaceX &copy;
-					<span>{year}</span>
-				</li>
-				<li><a href="https://twitter.com/spacex">Twitter</a></li>
-				<li><a href="https://www.youtube.com/spacex">YouTube</a></li>
-				<li><a href="https://www.instagram.com/spacex/">Instagram</a></li>
-				<li><a href="https://www.flickr.com/photos/spacex">Flickr</a></li>
-				<li><a href="https://www.linkedin.com/company/spacex">LinkedIn</a></li>
-				<li>
-					<a href="https://www.spacex.com/media/privacy_policy_spacex.pdf"
-						>Privacy</a
-					>
-				</li>
-				<li><a href="https://www.spacex.com/supplier/">Suppliers</a></li>
-				<li><a href="https://github.com/milliorn">Github</a></li>
-			</ul>
-		</footer>
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+        font-family: "Familjen Grotesk", sans-serif;
+      }
 
-		<style>
-			body {
-				background: #000;
-				color: #fff;
-				font-family: "Familjen Grotesk", sans-serif;
-			}
+      /* Hide mobile main menu items */
+      .mobile-only {
+        display: none;
+      }
 
-			ul {
-				list-style: none;
-			}
+      /* Mobile menu */
+      .mobile-main-menu {
+        align-items: center;
+        background: #000;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        width: 320px;
+        z-index: 4;
+      }
 
-			/* Hide mobile main menu items */
-			.mobile-only {
-				display: none;
-			}
+      .mobile-main-menu ul {
+        align-items: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px;
+        width: 100%;
+      }
 
-			/* Mobile menu */
-			.mobile-main-menu {
-				align-items: center;
-				background: #000;
-				display: flex;
-				height: 100%;
-				justify-content: center;
-				position: fixed;
-				right: 0;
-				top: 0;
-				transform: translateX(100%);
-				transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-				width: 320px;
-				z-index: 4;
-			}
+      .mobile-main-menu ul li {
+        border-bottom: 1px #555 dotted;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 20px;
+        padding-bottom: 8px;
+        text-align: right;
+        text-transform: uppercase;
+        width: 100%;
+      }
 
-			.mobile-main-menu ul {
-				align-items: end;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				padding: 48px;
-				width: 100%;
-			}
+      .mobile-main-menu ul li a {
+        color: #fff;
+        transition: color 0.6s;
+      }
 
-			.mobile-main-menu ul li {
-				border-bottom: 1px #555 dotted;
-				font-size: 18px;
-				line-height: 28px;
-				margin-bottom: 20px;
-				padding-bottom: 8px;
-				text-align: right;
-				text-transform: uppercase;
-				width: 100%;
-			}
+      .mobile-main-menu ul li a:hover {
+        color: #aaa;
+      }
 
-			.mobile-main-menu ul li a {
-				color: #fff;
-				transition: color 0.6s;
-			}
+      /* Header/Navbar */
+      .main-header {
+        align-items: center;
+        display: flex;
+        height: 96px;
+        justify-content: space-between;
+        left: 0;
+        padding: 0 32px;
+        position: fixed;
+        text-transform: uppercase;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+      }
 
-			.mobile-main-menu ul li a:hover {
-				color: #aaa;
-			}
+      /* Logo */
+      .logo {
+        height: auto;
+        width: 208px;
+      }
 
-			/* Header/Navbar */
-			.main-header {
-				align-items: center;
-				display: flex;
-				height: 96px;
-				justify-content: space-between;
-				left: 0;
-				padding: 0 32px;
-				position: fixed;
-				text-transform: uppercase;
-				top: 0;
-				width: 100%;
-				z-index: 3;
-			}
+      .logo img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
 
-			/* Logo */
-			.logo {
-				height: auto;
-				width: 208px;
-			}
+      /* Desktop */
+      .desktop-menu {
+        margin-right: 56px;
+      }
 
-			.logo img {
-				display: block;
-				height: auto;
-				width: 100%;
-			}
+      .desktop-menu ul {
+        display: flex;
+      }
 
-			/* Desktop */
-			.desktop-menu {
-				margin-right: 56px;
-			}
+      .desktop-menu ul li {
+        margin-right: 20px;
+        padding-bottom: 2px;
+        position: relative;
+      }
 
-			.desktop-menu ul {
-				display: flex;
-			}
+      /* Menu item bottom border */
+      .desktop-menu ul li a::after {
+        background: #fff;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transform-origin: right center;
+        transform: scaleX(0);
+        transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        width: 100%;
+      }
 
-			.desktop-menu ul li {
-				margin-right: 20px;
-				padding-bottom: 2px;
-				position: relative;
-			}
+      .desktop-menu ul li a:hover::after {
+        transform-origin: left center;
+        transform: scaleX(1);
+        transition-duration: 0.4s;
+      }
 
-			/* Menu item bottom border */
-			.desktop-menu ul li a::after {
-				background: #fff;
-				bottom: 0;
-				content: "";
-				height: 1px;
-				left: 0;
-				position: absolute;
-				transform-origin: right center;
-				transform: scaleX(0);
-				transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-				width: 100%;
-			}
+      /* Hamburger Menu */
+      .hamburger {
+        position: fixed;
+        top: 40px;
+        right: 20px;
+        z-index: 10;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: none;
+        border: none;
+      }
 
-			.desktop-menu ul li a:hover::after {
-				transform-origin: left center;
-				transform: scaleX(1);
-				transition-duration: 0.4s;
-			}
+      .hamburger-top,
+      .hamburger-middle,
+      .hamburger-bottom {
+        background: #fff;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        transition: all 0.5s;
+        width: 20px;
+      }
 
-			/* Hamburger Menu */
-			.hamburger {
-				position: fixed;
-				top: 40px;
-				right: 20px;
-				z-index: 10;
-				cursor: pointer;
-				width: 20px;
-				height: 20px;
-				background: none;
-				border: none;
-			}
+      .hamburger-middle {
+        transform: translateY(5px);
+      }
 
-			.hamburger-top,
-			.hamburger-middle,
-			.hamburger-bottom {
-				background: #fff;
-				height: 2px;
-				left: 0;
-				position: absolute;
-				top: 0;
-				transition: all 0.5s;
-				width: 20px;
-			}
+      .hamburger-bottom {
+        transform: translateY(10px);
+      }
 
-			.hamburger-middle {
-				transform: translateY(5px);
-			}
+      /* Transition hamburger to X when open */
+      .open {
+        transform: rotate(90deg);
+      }
 
-			.hamburger-bottom {
-				transform: translateY(10px);
-			}
+      .open .hamburger-top {
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+      }
 
-			/* Transition hamburger to X when open */
-			.open {
-				transform: rotate(90deg);
-			}
+      .open .hamburger-middle {
+        display: none;
+      }
 
-			.open .hamburger-top {
-				transform: rotate(45deg) translateY(6px) translateX(6px);
-			}
-
-			.open .hamburger-middle {
-				display: none;
-			}
-
-			.open .hamburger-bottom {
-				transform: rotate(-45deg) translateY(6px) translateX(-6px);
-			}
-
-			/* Footer */
-			footer {
-				padding: 55px 0;
-				position: relative;
-			}
-
-			footer ul {
-				align-items: center;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-			}
-
-			footer ul li {
-				color: #aaa;
-				font-size: 13px;
-				line-height: 2.5;
-				margin-right: 30px;
-				text-transform: uppercase;
-			}
-
-			footer ul li a {
-				color: #fff;
-				transition: color 0.6s;
-			}
-
-			footer ul li a:hover {
-				color: #aaa;
-			}
-		</style>
-	</body>
+      .open .hamburger-bottom {
+        transform: rotate(-45deg) translateY(6px) translateX(-6px);
+      }
+    </style>
+  </body>
 </html>

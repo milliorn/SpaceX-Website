@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 /* Overlay */
 .overlay-show {
   background-color: rgba(0, 0, 0, 0.5);
