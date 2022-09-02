@@ -1,0 +1,53 @@
+---
+import { footerData } from "../data/data";
+
+const year: Number = new Date().getFullYear();
+---
+
+<footer id="footer">
+  <ul>
+    <li>
+      SpaceX &copy;
+      <span>{year}</span>
+    </li>
+    {
+      footerData.map((content) => (
+        <li>
+          <a href={content.url}>{content.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</footer>
+
+<style>
+  /* Footer */
+  footer {
+    padding: 56px 0;
+    position: relative;
+  }
+
+  footer ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer ul li {
+    color: #aaa;
+    font-size: 0.75rem;
+    line-height: 2.5;
+    margin-right: 32px;
+    text-transform: uppercase;
+  }
+
+  footer ul li a {
+    color: #fff;
+    transition: color 0.6s;
+  }
+
+  footer ul li a:hover {
+    color: #aaa;
+  }
+</style>
