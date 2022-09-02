@@ -1,262 +1,233 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const data: {
+  sectionName: string;
+  sectionId: string;
+  h4: string;
+  h2: string;
+  url: string;
+  span: string;
+  buttonId: string;
+}[] = [
+  {
+    sectionName: "section-a",
+    sectionId: "section-a",
+    h4: "Upcoming Launch",
+    h2: "CRS-25 Mission",
+    url: "https://www.spacex.com/launches/crs-25/",
+    span: "Rewatch",
+    buttonId: "arrow-a",
+  },
+  {
+    sectionName: "section-b",
+    sectionId: "section-b",
+    h4: "Recent Launch",
+    h2: "Starlink Mission",
+    url: "https://www.spacex.com/launches/sl4-23/",
+    span: "Rewatch",
+    buttonId: "arrow-b",
+  },
+  {
+    sectionName: "section-c",
+    sectionId: "section-c",
+    h4: "Recent Launch",
+    h2: "SES-22 Mission",
+    url: "https://www.spacex.com/launches/ses-22/",
+    span: "Rewatch",
+    buttonId: "arrow-c",
+  },
+  {
+    sectionName: "section-d",
+    sectionId: "section-d",
+    h4: "Recent Launch",
+    h2: "Globalstar FM15 Mission",
+    url: "https://www.spacex.com/launches/globalstar/",
+    span: "Rewatch",
+    buttonId: "arrow-d",
+  },
+  {
+    sectionName: "section-e",
+    sectionId: "section-e",
+    h4: "",
+    h2: "Startship Update",
+    url: "https://www.spacex.com/vehicles/starship/",
+    span: "Rewatch",
+    buttonId: "arrow-e",
+  },
+  {
+    sectionName: "section-f",
+    sectionId: "section-f",
+    h4: "",
+    h2: "Starship to land nasa astronauts on the moon",
+    url: "https://www.youtube.com/watch?v=U5_etd3l41g",
+    span: "Rewatch",
+    buttonId: "arrow-f",
+  },
+];
 ---
 
 <Layout title="SpaceX">
-	<section class="section-a" id="section-a">
-		<div class="section-inner">
-			<h4>Upcoming Launch</h4>
-			<h2>CRS-25 Mission</h2>
-			<a href="https://www.spacex.com/launches/crs-25/" class="btn">
-				<div class="hover"></div>
-				<span>Rewatch</span>
-			</a>
-		</div>
+  {
+    data.map((content) => (
+      <section class={content.sectionName} id={content.sectionId}>
+        <div class="section-inner">
+          <h4>{content.h4}</h4>
+          <h2>{content.h2}</h2>
+          <a href={content.url} class="btn">
+            <div class="hover" />
+            <span>{content.span}</span>
+          </a>
+        </div>
 
-		<button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-a">
-			<svg width="30px" height="20px">
-				<path
-					stroke="#ffffff"
-					fill="none"
-					stroke-width="2px"
-					d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
-			</svg>
-		</button>
-	</section>
-
-	<section class="section-b" id="section-b">
-		<div class="section-inner">
-			<h4>Recent Launch</h4>
-			<h2>Starlink Mission</h2>
-			<a href="https://www.spacex.com/launches/sl4-23/" class="btn">
-				<div class="hover"></div>
-				<span>Rewatch</span>
-			</a>
-		</div>
-
-		<button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-b">
-			<svg width="30px" height="20px">
-				<path
-					stroke="#ffffff"
-					fill="none"
-					stroke-width="2px"
-					d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
-			</svg>
-		</button>
-	</section>
-
-	<section class="section-c" id="section-c">
-		<div class="section-inner">
-			<h4>Recent Mission</h4>
-			<h2>SES-22 Mission</h2>
-			<a href="https://www.spacex.com/launches/ses-22/" class="btn">
-				<div class="hover"></div>
-				<span>Rewatch</span>
-			</a>
-		</div>
-
-		<button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-c">
-			<svg width="30px" height="20px">
-				<path
-					stroke="#ffffff"
-					fill="none"
-					stroke-width="2px"
-					d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
-			</svg>
-		</button>
-	</section>
-
-	<section class="section-d" id="section-d">
-		<div class="section-inner">
-			<h4>Recent Launch</h4>
-			<h2>Globalstar FM15 Mission</h2>
-			<a href="https://www.spacex.com/launches/globalstar/" class="btn">
-				<div class="hover"></div>
-				<span>Rewatch</span>
-			</a>
-		</div>
-
-		<button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-d">
-			<svg width="30px" height="20px">
-				<path
-					stroke="#ffffff"
-					fill="none"
-					stroke-width="2px"
-					d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
-			</svg>
-		</button>
-	</section>
-
-	<section class="section-e" id="section-e">
-		<div class="section-inner">
-			<h2>Starship Update</h2>
-			<a href="https://www.spacex.com/vehicles/starship/" class="btn">
-				<div class="hover"></div>
-				<span>Rewatch</span>
-			</a>
-		</div>
-
-		<button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-e">
-			<svg width="30px" height="20px">
-				<path
-					stroke="#ffffff"
-					fill="none"
-					stroke-width="2px"
-					d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
-			</svg>
-		</button>
-	</section>
-
-	<section class="section-f" id="section-f">
-		<div class="section-inner">
-			<h2>Starship to land nasa astronauts on the moon</h2>
-			<a href="https://www.youtube.com/watch?v=U5_etd3l41g" class="btn">
-				<div class="hover"></div>
-				<span>Rewatch</span>
-			</a>
-		</div>
-
-		<button class="scroll-arrow" onclick="scrollPage(this)" id="arrow-f">
-			<svg width="30px" height="20px">
-				<path
-					stroke="#ffffff"
-					fill="none"
-					stroke-width="2px"
-					d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "></path>
-			</svg>
-		</button>
-	</section>
+        <button
+          class="scroll-arrow"
+          onclick="scrollPage(this)"
+          id={content.buttonId}
+        >
+          <svg width="30px" height="20px">
+            <path
+              stroke="#ffffff"
+              fill="none"
+              stroke-width="2px"
+              d="M2.000,5.000 L15.000,18.000 L28.000,5.000 "
+            />
+          </svg>
+        </button>
+      </section>
+    ))
+  }
 </Layout>
 
 <style>
-	.scroll-arrow {
-		animation: fadeBounce 5s infinite;
-		bottom: 48px;
-		left: 50%;
-		position: absolute;
-		transform: translateX(-50%);
-		background-color: transparent;
-	}
+  .scroll-arrow {
+    animation: fadeBounce 5s infinite;
+    bottom: 48px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: transparent;
+  }
 
-	/* Sections */
-	section {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 100vh;
-		position: relative;
-		text-transform: uppercase;
-	}
+  /* Sections */
+  section {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    text-transform: uppercase;
+  }
 
-	.section-inner {
-		bottom: 192px;
-		left: 150px;
-		max-width: 560px;
-		position: absolute;
-	}
+  .section-inner {
+    bottom: 192px;
+    left: 150px;
+    max-width: 560px;
+    position: absolute;
+  }
 
-	.section-inner h4 {
-		animation: fadeInUp 0.5s ease-in-out;
-		font-size: 22px;
-		font-weight: 300;
-		margin-bottom: 5px;
-	}
+  .section-inner h4 {
+    animation: fadeInUp 0.5s ease-in-out;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
 
-	.section-inner h2 {
-		animation-fill-mode: both;
-		animation: fadeInUp 0.5s ease-in-out 0.2s;
-		font-size: 50px;
-		font-weight: 700;
-		margin-bottom: 20px;
-	}
+  .section-inner h2 {
+    animation-fill-mode: both;
+    animation: fadeInUp 0.5s ease-in-out 0.2s;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 
-	.section-inner a {
-		animation-fill-mode: both;
-		animation: fadeInUp 0.5s ease-in-out 0.4s;
-	}
+  .section-inner a {
+    animation-fill-mode: both;
+    animation: fadeInUp 0.5s ease-in-out 0.4s;
+  }
 
-	/* Background images */
-	.section-a {
-		background-image: url("../img/section-a.webp");
-	}
-	.section-b {
-		background-image: url("../img/section-b.webp");
-	}
-	.section-c {
-		background-image: url("../img/section-c.webp");
-	}
-	.section-d {
-		background-image: url("../img/section-d.webp");
-	}
-	.section-e {
-		background-image: url("../img/section-e.webp");
-	}
-	.section-f {
-		background-image: url("../img/section-f.webp");
-	}
+  /* Background images */
+  .section-a {
+    background-image: url("../img/section-a.webp");
+  }
+  .section-b {
+    background-image: url("../img/section-b.webp");
+  }
+  .section-c {
+    background-image: url("../img/section-c.webp");
+  }
+  .section-d {
+    background-image: url("../img/section-d.webp");
+  }
+  .section-e {
+    background-image: url("../img/section-e.webp");
+  }
+  .section-f {
+    background-image: url("../img/section-f.webp");
+  }
 
-	.section-animate {
-		animation: fadeIn 2s ease-in-out;
-	}
+  .section-animate {
+    animation: fadeIn 2s ease-in-out;
+  }
 
-	.section-inner-center {
-		left: 50%;
-		position: absolute;
-		text-align: center;
-		text-transform: uppercase;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		width: 80%;
-	}
+  .section-inner-center {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
 
-	.section-inner-center h3 {
-		animation: fadeInUp 0.5s ease-in-out;
-		font-size: 100px;
-		margin-bottom: 15px;
-	}
+  .section-inner-center h3 {
+    animation: fadeInUp 0.5s ease-in-out;
+    font-size: 100px;
+    margin-bottom: 15px;
+  }
 
-	.section-inner-center p {
-		animation-fill-mode: both;
-		animation: fadeInUp 0.5s ease-in-out 0.2s;
-		font-size: 20px;
-	}
+  .section-inner-center p {
+    animation-fill-mode: both;
+    animation: fadeInUp 0.5s ease-in-out 0.2s;
+    font-size: 20px;
+  }
 
-	/* Animations */
-	@keyframes fadeInUp {
-		0% {
-			opacity: 0;
-			transform: translateY(140px);
-		}
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(140px);
+    }
 
-		100% {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
 
-		100% {
-			opacity: 1;
-		}
-	}
+    100% {
+      opacity: 1;
+    }
+  }
 
-	@keyframes fadeBounce {
-		0%,
-		20%,
-		50%,
-		80%,
-		100% {
-			opacity: 0;
-			transform: translateY(-20px);
-		}
+  @keyframes fadeBounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
 
-		40% {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+    40% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 </style>
