@@ -15,22 +15,6 @@ ul {
   list-style: none;
 }
 
-/* Overlay */
-.overlay-show {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
-}
-
-/* Bring menu from right */
-.show-menu {
-  transform: translateX(0);
-}
-
 .btn {
   border: 2px solid #fff;
   cursor: pointer;

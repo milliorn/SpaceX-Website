@@ -271,6 +271,22 @@ import Header from "../components/Header.astro";
       .open .hamburger-bottom {
         transform: rotate(-45deg) translateY(6px) translateX(-6px);
       }
+
+      /* Overlay */
+      .overlay-show {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+      }
+
+      /* Bring menu from right */
+      .show-menu {
+        transform: translateX(0);
+      }
     </style>
   </body>
 </html>
