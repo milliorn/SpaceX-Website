@@ -1,19 +1,7 @@
 ---
-const year: Number = new Date().getFullYear();
+import { footerData } from "../data/data";
 
-const data: { name: string; url: string }[] = [
-  { name: "Twitter", url: "https://twitter.com/spacex" },
-  { name: "YouTube", url: "https://youtube.com/spacex" },
-  { name: "Instagram", url: "https://instagram.com/spacex" },
-  { name: "Flickr", url: "https://flickr.com/spacex" },
-  { name: "LinkedIn", url: "https://linkedin.com/spacex" },
-  {
-    name: "Privacy",
-    url: "https://www.spacex.com/media/privacy_policy_spacex.pdf",
-  },
-  { name: "Suppliers", url: "https://www.spacex.com/supplier" },
-  { name: "Github", url: "https://github.com/milliorn" },
-];
+const year: Number = new Date().getFullYear();
 ---
 
 <footer id="footer">
@@ -23,7 +11,7 @@ const data: { name: string; url: string }[] = [
       <span>{year}</span>
     </li>
     {
-      data.map((content) => (
+      footerData.map((content) => (
         <li>
           <a href={content.url}>{content.name}</a>
         </li>

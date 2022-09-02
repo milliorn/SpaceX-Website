@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { menuData } from "../data/data";
 ---
 
 <!DOCTYPE html>
@@ -12,37 +13,13 @@ import Header from "../components/Header.astro";
 
     <div id="mobile-menu" class="mobile-main-menu">
       <ul>
-        <li><a href="https://www.spacex.com/mission/">Mission</a></li>
-        <li><a href="https://www.spacex.com/launches/">Launches</a></li>
-        <li><a href="https://www.spacex.com/careers/">Careers</a></li>
-        <li><a href="https://www.spacex.com/updates/">Updates</a></li>
-        <li><a href="https://shop.spacex.com/">Shop</a></li>
-
-        <li class="mobile-only">
-          <a href="https://www.spacex.com/vehicles/falcon-9/">Falcon 9</a>
-        </li>
-        <li class="mobile-only">
-          <a href="https://www.spacex.com/vehicles/falcon-heavy/"
-            >Falcon Heavy</a
-          >
-        </li>
-        <li class="mobile-only">
-          <a href="https://www.spacex.com/vehicles/dragon/">Dragon</a>
-        </li>
-        <li class="mobile-only">
-          <a href="https://www.spacex.com/vehicles/starship/">Starship</a>
-        </li>
-        <li class="mobile-only">
-          <a href="https://www.spacex.com/human-spaceflight/"
-            >Human Spaceflight</a
-          >
-        </li>
-        <li class="mobile-only">
-          <a href="https://www.spacex.com/rideshare/">Rideshare</a>
-        </li>
-        <li class="mobile-only">
-          <a href="https://www.starlink.com/">Starlink</a>
-        </li>
+        {
+          menuData.map((content) => (
+            <li class={content.class}>
+              <a href={content.url}>{content.text}</a>
+            </li>
+          ))
+        }
       </ul>
     </div>
 
@@ -55,27 +32,15 @@ import Header from "../components/Header.astro";
 
       <nav class="desktop-menu">
         <ul>
-          <li>
-            <a href="https://www.spacex.com/vehicles/falcon-9/">Falcon 9</a>
-          </li>
-          <li>
-            <a href="https://www.spacex.com/vehicles/falcon-heavy/"
-              >Falcon Heavy</a
-            >
-          </li>
-          <li><a href="https://www.spacex.com/vehicles/dragon/">Dragon</a></li>
-          <li>
-            <a href="https://www.spacex.com/vehicles/starship/">Starship</a>
-          </li>
-          <li>
-            <a href="https://www.spacex.com/human-spaceflight/"
-              >Human Spaceflight</a
-            >
-          </li>
-          <li><a href="https://www.spacex.com/rideshare/">Rideshare</a></li>
-
-          <li><a href="https://www.starlink.com/">Starlink</a></li>
-          <li><a href="https://shop.spacex.com/">Store</a></li>
+          {
+            menuData
+              .filter((content) => !content.desktop)
+              .map((content) => (
+                <li>
+                  <a href={content.url}>{content.text}</a>
+                </li>
+              ))
+          }
         </ul>
       </nav>
     </header>
@@ -95,6 +60,7 @@ import Header from "../components/Header.astro";
           menu.classList.toggle("show-menu");
         }
       </script>
+
       <span class="hamburger-top"></span>
       <span class="hamburger-middle"></span>
       <span class="hamburger-bottom"></span>
