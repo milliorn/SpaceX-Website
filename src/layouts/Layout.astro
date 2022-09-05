@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { menuData } from "../data/data";
+import logo from "../img/logo.png";
 ---
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@ import { menuData } from "../data/data";
     <header class="main-header">
       <div class="logo">
         <a href="./">
-          <img src="src/img/logo.png" alt="SpaceX" />
+          <img src={logo} alt="SpaceX" />
         </a>
       </div>
 
