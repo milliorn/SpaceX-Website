@@ -57,12 +57,10 @@ ul {
 }
 
 @media (max-width: 960px) {
-  /* Hide desktop menu */
   .desktop-menu {
     display: none;
   }
 
-  /* Show mobile items */
   .mobile-only {
     display: block;
   }
